@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "badnitwit",
+	"version": "${version}",
+	"name": "BadNitwit",
+	"description": "Disable Nitwits",
+	"authors": [
+		"break08"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/project/badnitwit",
+		"sources": "https://www.google.com/"
+	},
+	"license": "MIT",
+	"icon": "assets/badnitwit/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.nitwit.BadNitwit"
+		]
+	},
+	"mixins": [
+		"badnitwit.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": ">=1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
