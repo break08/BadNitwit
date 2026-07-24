@@ -12,8 +12,8 @@ public class RemoveNitwit {
 	@Inject(at = @At("TAIL"), method = "tick")
 	private void tick(CallbackInfo info) {
 		Villager villager = (Villager)(Object)this;
-		if (villager.getVillagerData().getProfession() == VillagerProfession.NITWIT){
-			villager.setVillagerData(villager.getVillagerData().setProfession(VillagerProfession.NONE));
+		if (villager.getVillagerData().profession().is(VillagerProfession.NITWIT)){
+			villager.setVillagerData(villager.getVillagerData().withProfession(villager.registryAccess(), VillagerProfession.NONE));
 		}
 	}
 }
